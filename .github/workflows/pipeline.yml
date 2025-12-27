@@ -70,6 +70,9 @@ jobs:
       run: pip install requests
     - name: Run Smoke Test
       run: python tests/test_smoke.py
+    - name: Docker Logs (Debug)
+      if: always()
+      run: docker logs mlops-container
     - name: Stop Container
       if: always()
       run: docker stop mlops-container || true
