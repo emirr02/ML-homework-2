@@ -65,7 +65,7 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag mlops-app:latest
         docker run -d -p 8000:8000 --name mlops-container mlops-app:latest
-        sleep 5 # Wait for container to start
+        sleep 15 # Wait for container to start
     - name: Install Test Dependencies
       run: pip install requests
     - name: Run Smoke Test
