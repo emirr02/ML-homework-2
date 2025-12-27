@@ -3,6 +3,10 @@ from feature_engineering import hash_feature
 
 app = Flask(__name__)
 
+@app.route('/')
+def health_check():
+    return "MLOps App is running", 200
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
