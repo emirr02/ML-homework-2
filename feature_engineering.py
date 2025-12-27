@@ -1,6 +1,6 @@
 import hashlib
 
-def hash_feature(feature_value):
+def hash_feature(feature_value)
     """
     A simple mock hashing function for data preprocessing.
     Uses md5 for determinism.
